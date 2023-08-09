@@ -63,6 +63,36 @@ ol {
     display: inline;
 }
 
+/* Styling the Links */
+
+a {
+    outline: none;
+}
+
+a:link {
+    color: #7ca1d2;
+}
+
+a:visited {
+    color: default;
+}
+
+a:focus {
+    text-decoration: none;
+    background: #bcd8ba;
+}   
+
+a:hover {
+    text-decoration: none;
+    background: #bcd8ba;
+    border-radius: 5%;
+}
+
+a:active {
+    background: #4b3669;
+    color: #faedcd;
+}
+
 main {
     font-family: 'Baloo Paaji 2', cursive;
 }
