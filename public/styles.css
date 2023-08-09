@@ -1,0 +1,444 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Paaji+2:wght@400;700&family=Bentham&family=Cherry+Bomb+One&family=Darumadrop+One&family=Itim&family=Pacifico&family=Preahvihear&display=swap');
+
+body {
+    background: #C7D3BF;
+    padding: 0;
+    margin: 0;
+    font-family: "Open Sans", sans-serif;
+}
+
+header {
+    background-color: #E0EFDE;
+    font-family: 'Darumadrop One', cursive;
+    font-size: 25px;
+    text-align: center;
+}  
+  
+nav {
+    border-bottom: 5px solid #7180AC;
+}
+
+nav li:nth-child(1) {
+    background: url('../gifs/capy_tea.gif') no-repeat top left;
+    background-size: 50px;
+    height: 50px;
+    margin: 0;
+    padding: 15px 25px 4px 55px;
+    list-style: none;
+}
+
+nav li:nth-child(2) {
+    background: url('../gifs/capy_present.gif') no-repeat top left;
+    background-size: 50px;
+    height: 50px;
+    margin: 0;
+    padding: 15px 25px 4px 50px;
+    list-style: none;
+}
+
+nav li:nth-child(3) {
+    background: url('../gifs/capy_butterfly.gif') no-repeat top left;
+    background-size: 50px;
+    height: 50px;
+    margin: 0;
+    padding: 15px 25px 4px 50px;
+    list-style: none;
+}
+
+nav li:nth-child(4) {
+    background: url('../gifs/capy_spin.gif') no-repeat top left;
+    background-size: 50px;
+    height: 50px;
+    margin: 0;
+    padding: 15px 25px 4px 50px;
+    list-style: none;
+}
+  
+ol {
+    padding-left: 0;
+}
+  
+.crumb {
+    margin-right: 2em;
+    display: inline;
+}
+
+main {
+    font-family: 'Baloo Paaji 2', cursive;
+}
+
+/* My Day Styling */
+
+#today-date {
+    background-color: #EBEBD3;
+    padding: 0 10px 0 10px;
+    border-radius: 10px;
+}
+
+.my-day-container {
+    /* ... container styles ... */
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.legend-section {
+    /* ... legend styles ... */
+    width: 150px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    height: 100vh; /* Make it full height of the viewport */
+    overflow-y: auto; /* Add scrolling if content overflows */
+}
+
+.mood-selection-section {
+    /* ... mood selection styles ... */
+    flex: 1;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.mood-icon {
+    border-radius: 25px;
+    min-width: 75px;
+    padding: 5px;
+    margin: 20px 0 -10px 0;
+}
+
+.mood-box {
+    /* ... mood box styles ... */
+    width: 400px;
+    height: 400px;
+    border-radius: 10px;
+    margin-top: 20px;
+    /* Selected mood color applied using JavaScript */
+}
+
+.mood-text {
+    font-weight: bold;
+    border: none;
+    
+}
+
+.kawaii-animal-box {
+    width: 400px;
+    height: 400px;
+    margin: auto;
+    background-image: url('../kawaii-mallow-edit.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 30%;
+    position: relative;
+    transition: transform 0.3s ease; /* Adds transition property to ancitipate jiggle animation*/
+}
+  
+  /* Add a class for the jiggle animation */
+.jiggle {
+    animation: jiggleAnimation 0.3s infinite alternate; /* Apply the jiggle animation */
+}
+  
+  /* Keyframes for the jiggle animation */
+@keyframes jiggleAnimation {
+    from {
+      transform: rotate(-5deg);
+    }
+    to {
+      transform: rotate(5deg);
+    }
+}
+
+.sproing {
+    animation: sproingAnimation 0.4s ease-in-out;
+}
+  
+@keyframes sproingAnimation {
+    0% {
+      transform: translateY(20px) scaleY(1);
+    }
+    25% {
+      transform: translateY(-15px) scaleY(0.8);
+    }
+    50% {
+      transform: translateY(0px) scaleY(1.2);
+    }
+    75% {
+      transform: translateY(-5px) scaleY(0.9);
+    }
+    100% {
+      transform: translateY(0) scaleY(1);
+    }
+}
+
+
+/* Colors Styling */
+.color-list {
+    list-style: none;
+    padding: 10px 0 0 20px;
+}
+
+.color-list > li {
+    background: url('../fruit-gifs/little-orange.gif') no-repeat top left;
+    background-size: 70px;
+    height: 50px;
+    margin: 0;
+    padding: 0px 0px 20px 60px;
+    list-style: none;
+    text-shadow: -0.5px -0.5px 0 #ffffff,  
+    0.5px -0.5px 0 #ffffff,
+    -0.5px 0.5px 0 #ffffff,
+    0.5px 0.5px 0 #ffffff;
+}
+
+.color-list > li > button {
+    display: inline-flexbox ;
+    justify-content: space-around;
+}
+  
+.color-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.color-label {
+    margin-left: 10px;
+}
+
+.color-svg {
+    width: 24px;
+    height: 24px;
+    fill: currentColor; /* Set the fill color to match the mood label */
+}
+
+button {
+    align-self: center;
+    background-color: #fff;
+    background-image: none;
+    background-position: 0 90%;
+    background-repeat: repeat no-repeat;
+    background-size: 4px 3px;
+    border-radius: 15px 225px 255px 15px 15px 255px 225px 15px;
+    border-style: solid;
+    border-width: 2px;
+    box-shadow: rgba(0, 0, 0, .2) 15px 28px 25px -18px;
+    box-sizing: border-box;
+    border-color: #17183B;
+    color: #506390;
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'Darumadrop One', cursive;;
+    font-size: 1rem;
+    line-height: 23px;
+    outline: none;
+    padding: .1rem;
+    text-decoration: none;
+    transition: all 235ms ease-in-out;
+    border-bottom-left-radius: 15px 255px;
+    border-bottom-right-radius: 225px 15px;
+    border-top-left-radius: 255px 15px;
+    border-top-right-radius: 15px 225px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+button:hover {
+    box-shadow: rgba(0, 0, 0, .3) 2px 8px 8px -5px;
+    transform: translate3d(0, 2px, 0);
+}
+button:focus {
+    box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
+}
+
+/* Calendar Styling */
+
+body, *{
+    box-sizing: border-box;
+}
+
+.calendar
+{
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.4);
+}
+
+.calendar .dropdown
+{
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    color: #7180AC;
+    text-align: center;
+    font-size: 14pt;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 30px;
+    padding-right: 30px;
+    width: 160px;
+    left: 0px;
+    z-index: 2000;
+}
+
+.calendar .dropdown .dropdown-item
+{
+    cursor:pointer;
+    opacity: .7;
+    transition: .5s opacity;
+}
+
+.calendar .dropdown .dropdown-item:hover
+{
+    opacity: 1;
+}
+
+.calendar .years
+{
+    display:none;
+}
+
+.calendar .title
+{
+    text-align:center;
+    font-size:20pt;
+}
+
+.calendar .calendar-btn
+{
+    float: left;
+    background-color: #E49273;
+    color: white;
+    text-align: center;
+    font-size: 14pt;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    position: relative;
+    width: 20%;
+    cursor: pointer;
+    transition: .5s background-color;
+}
+
+.calendar .calendar-btn:hover{
+    background-color:#3C493F;
+}
+
+.calendar .year-btn
+{
+    float:right;
+}
+
+.calendar .calendar-dates .days .day
+{
+    float:left;
+    width: 12%;
+    margin: 1%;
+    padding: 1%;
+    font-size:13pt;
+    text-align:center;
+    border-radius: 10px;
+    border: solid 1px #ddd;
+}
+
+.calendar .calendar-dates .days .day.blank
+{
+    background-color: white;
+    border:none;
+}
+
+.calendar .calendar-dates .days .day.selected
+{
+    background-color: #7180AC;
+    color: white;
+    cursor:pointer;
+    opacity: .5;
+    transition: .5s opacity;
+}
+
+.calendar .calendar-dates .days .day.selected:hover
+{
+    opacity: 1;
+}
+
+.calendar .calendar-dates .days .day.label
+{
+    height: 40px;
+    background-color: white;
+    color: black;
+    border:none;
+    font-weight:bold;
+}
+
+.clear{
+    clear:both;
+}
+
+@media only screen and (max-width: 960px) {
+    .calendar{
+        width: 100%;
+        margin: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+        position: relative;
+        left: 0px;
+    }
+}
+
+#save-calendar-button {
+    text-align: center;
+    margin: auto;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+}
+
+/* Style for the mood options dropdown */
+#mood-dropdown {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+/* Optional: Style the selected option */
+#mood-dropdown option:checked {
+    background-color: #f0f0f0;
+}
+
+/* Optional: Style the dropdown container */
+.mood-dropdown-container {
+    margin-bottom: 20px;
+}
+
+/* About Page Styling */
+
+.about-page {
+    font-family: 'Darumadrop One', cursive;
+    text-align: center;
+}
+
+.about-page > p {
+    font-family: 'Preahvihear', sans-serif;
+    margin: 1rem 4rem;
+    text-align: justify;
+}
+
+.about-page > img {
+   display:inline-flex;
+   height: 150px;
+   margin: 10px;
+}
+
+#capy-poke {
+    float: right;
+}
+
+#capy-read {
+    float: left;
+    margin-left: 35px;
+}

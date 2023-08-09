@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>#.mood</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>#.mood</h1>
+        <nav>
+            <ol>
+                <li class="crumb"><a href="./index.html">My Day</a></li>
+                <li class="crumb"><a href="./colors.html">Colors</a></li>
+                <li class="crumb"><a href="./calendar.html">Calendar</a></li>
+                <li class="crumb"><a href="./about.html">About</a></li>
+            </ol>
+        </nav>
+    </header>
+    <main>
+        <div class="mood-dropdown-container">
+            <label for="mood-dropdown">Select Mood:</label>
+            <select id="mood-dropdown" class="dropdown"></select>
+        </div>
+        <div class="calendar" id="calendar">
+            <div class="calendar-btn month-btn" onclick="$('#months').toggle('fast')">
+                <span id="curMonth"></span>
+                <div id="months" class="months dropdown"></div>
+            </div>
+        
+            <div class="calendar-btn year-btn" onclick="$('#years').toggle('fast')">
+                <span id="curYear"></span>
+                <div id="years" class="years dropdown"></div>
+            </div>
+        
+            <div class="clear"></div>
+        
+            <div class="calendar-dates">
+                <div class="days">
+                    <div class="day label">SUN</div>
+                    <div class="day label">MON</div>
+                    <div class="day label">TUE</div>
+                    <div class="day label">WED</div>
+                    <div class="day label">THUR</div>
+                    <div class="day label">FRI</div>
+                    <div class="day label">SAT</div>
+        
+                    <div class="clear"></div>
+                </div>
+        
+                <div id="calendarDays" class="days">
+                </div>
+            </div>
+        </div>
+        <button id="save-calendar-button">Save Calendar Data</button>
+    </main>
+
+    <script language="JavaScript"  src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.0/jquery.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="calendar.js"></script>
+</body>
+</html>

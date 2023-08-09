@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>#.mood</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>#.mood</h1>
+        <nav>
+            <ol>
+                <li class="crumb"><a href="./index.html">My Day</a></li>
+                <li class="crumb"><a href="./colors.html">Colors</a></li>
+                <li class="crumb"><a href="./calendar.html">Calendar</a></li>
+                <li class="crumb"><a href="./about.html">About</a></li>
+            </ol>
+        </nav>
+    </header>
+    <main>
+        <section class="color-form">
+            <h2>Create a Custom Mood Color</h2>
+            <form id="color-form">
+              <label for="mood-label">Mood Label:</label>
+              <input type="text" id="mood-label" name="mood-label" required>
+              
+              <label for="color-picker">Select Color:</label>
+              <input type="color" id="color-picker" name="color-picker" value="#ff0000" required>
+              
+              <button type="submit">Create Mood Color</button>
+            </form>
+          </section>
+      
+          <section class="color-list">
+            <h2>Custom Mood Colors</h2>
+            <ul id="color-list" class="color-list">
+              <!-- This is where generated color labels will appear by JavaScript-->
+            </ul>
+          </section>
+    </main>
+
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="colors.js"></script>
+</body>
+</html>
