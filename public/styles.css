@@ -215,6 +215,10 @@ main {
     fill: currentColor; /* Set the fill color to match the mood label */
 }
 
+.color-form {
+    margin-left: 20px;
+}
+
 button {
     align-self: center;
     background-color: #fff;
