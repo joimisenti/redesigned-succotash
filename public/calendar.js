@@ -8,7 +8,7 @@ var mousedown = false;
 var mousemove = false;
 
 // GET mood options from the server and populate the dropdown
-async function getAndPopulateMoodOptions() {
+async function getMoodOptions() {
     try {
         const response = await axios.get('http://localhost:4007/api/colors');
         const moodOptions = response.data;
@@ -44,6 +44,7 @@ function loadCalendarMonths() {
                 document.getElementById("curMonth").innerHTML = months[month];
                 loadCalendarDays();
                 displaySavedCalendarData();
+                console.log("displaySavedCalendarData fired in Months dropdown")
                 return month;
             };
         })();
@@ -67,6 +68,7 @@ function loadCalendarYears() {
                 document.getElementById("curYear").innerHTML = year;
                 loadCalendarDays();
                 displaySavedCalendarData();
+                console.log("displaySavedCalendarData fired in Years dropdown")
                 return year;
             };
         })();
@@ -164,7 +166,7 @@ window.addEventListener('load', async function () {
     document.getElementById("curMonth").innerHTML = months[month];
     document.getElementById("curYear").innerHTML = year;
 
-    const moodOptions = await getAndPopulateMoodOptions();
+    const moodOptions = await getMoodOptions();
 
     loadCalendarMonths();
     loadCalendarYears();
@@ -202,7 +204,7 @@ function gatherSelectedDays() {
 
 async function getSavedCalendarData() {
     try {
-        const response = await axios.get('http://localhost:4007/api/calendar'); // Adjust the URL if needed
+        const response = await axios.get('http://localhost:4007/api/calendar');
         console.log(response.data)
         return response.data; // Return the array of saved calendar data
     } catch (error) {
@@ -231,7 +233,7 @@ async function displaySavedCalendarData() {
             }
         });
 
-        console.log("displaySavedCalendarData fired")
+        console.log("displaySavedCalendarData executed")
     } catch (error) {
         console.error('Error displaying saved calendar data:', error);
     }
